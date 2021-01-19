@@ -8,6 +8,8 @@ class Main extends CI_Controller {
 	{
         $data['pageTitle'] = "UniHealth | Home";
 
+		$this->load->helper('url');
 		$this->load->view('template/navbar', $data);
+		$this->load->view('main');
 	}
 }
