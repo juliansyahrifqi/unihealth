@@ -25,6 +25,8 @@ class Main extends CI_Controller {
             'pageTitle' => 'UniHealth | Home'
         ];
 
+		$this->load->helper('url');
 		$this->load->view('template/navbar', $data);
+		$this->load->view('main');
 	}
 }
