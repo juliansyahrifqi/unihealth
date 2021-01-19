@@ -11,34 +11,34 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Image and text -->
     
     <nav class="navbar navbar-light" style="background-color: #FFB004; font-family: 'Oswald', sans-serif; letter-spacing: 1px;">
-            <a class="navbar-brand mx-3" href="#">
-               <img src="<?= base_url('assets/images/logo.png'); ?>" alt="UniHealth Logo" style="width: 60px; height: 60px;">
-            </a>
+        <a class="navbar-brand mx-3" href="#">
+            <img src="<?= base_url('assets/images/logo.png'); ?>" alt="UniHealth Logo" style="width: 60px; height: 60px;">
+        </a>
 
-            <ul class="nav justify-content-end">
-                <li class="nav-item text-dark">
-                    <a class="nav-link text-dark mx-2" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark mx-2" href="#">Nutrition Calc</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark mx-2" href="#">Foods</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark mx-2" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-links btn btn-dark px-3 mx-2" style="border-radius: 30px;" href="">Sign Up</a>
-                </li>
-            </ul>
+        <ul class="nav justify-content-end">
+            <li class="nav-item text-dark">
+                <a class="nav-link text-dark mx-2" href="<?= base_url('main'); ?>">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#">Nutrition Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#">Foods</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="<?= base_url('auth'); ?>">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-links btn btn-dark px-3 mx-2" style="border-radius: 30px;" href="">Sign Up</a>
+            </li>
+        </ul>
     </nav>
     
-    
-</body>
-</html>
