@@ -50,6 +50,5 @@ class Auth extends CI_Controller {
             $this->load->view('template/navbar', $data);
             $this->load->view('auth/register');
         }
-       
     }
 }
