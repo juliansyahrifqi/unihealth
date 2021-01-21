@@ -114,7 +114,7 @@
 					</div>
 
 					<div class="col-3 text-right">
-						<img src="<?= base_url('assets/images/about1.png'); ?>" alt="Foto About 1" style="height: 300px; width: 197px;">
+						<img src="<?= base_url('assets/images/about1.png'); ?>" alt="Did You Know?" style="height: 300px; width: 197px;">
 					</div>
 				</div>
 			</div>
@@ -122,7 +122,7 @@
 			<div class="why" style="margin-top: 100px;">
 				<div class="row align-items-center">
 					<div class="col-3 text-left">
-						<img src="<?= base_url('assets/images/about2.png'); ?>" alt="Foto About 1" style="height: 300px; width: 197px;">
+						<img src="<?= base_url('assets/images/about2.png'); ?>" alt="Why UniHealth" style="height: 300px; width: 197px;">
 					</div>
 
 					<div class="col-9">
