@@ -6,7 +6,7 @@ class Calculator extends CI_Controller {
 	public function index()
 	{
         $data = [
-            'pageTitle' => 'UniHealth | Home'
+            'pageTitle' => 'UniHealth | Calculator'
         ];
 
 		$this->load->view('template/navbar', $data);

@@ -30,7 +30,7 @@
 
 		<div class="row px-3 my-5">
 			<div class="col-lg-4">
-				<div class="card">
+				<div class="card mt-4">
 					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
 					<div class="card-body">
 						<h3 class="card-title text-center">Fried Rice</h3>
@@ -51,7 +51,7 @@
 			</div>
 
 			<div class="col-lg-4">
-				<div class="card">
+				<div class="card mt-4">
 					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
 					<div class="card-body">
 						<h3 class="card-title text-center">Fried Rice</h3>
@@ -72,7 +72,7 @@
 			</div>
 
 			<div class="col-lg-4">
-				<div class="card">
+				<div class="card mt-4">
 					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
 					<div class="card-body">
 						<h3 class="card-title text-center">Fried Rice</h3>

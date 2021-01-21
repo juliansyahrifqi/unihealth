@@ -6,7 +6,7 @@ class Detail extends CI_Controller {
 	public function index()
 	{
         $data = [
-            'pageTitle' => 'UniHealth | Home'
+            'pageTitle' => 'UniHealth | Food Details'
         ];
 
 		$this->load->view('template/navbar', $data);

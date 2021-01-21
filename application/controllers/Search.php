@@ -6,7 +6,7 @@ class Search extends CI_Controller {
 	public function index()
 	{
         $data = [
-            'pageTitle' => 'UniHealth | Home'
+            'pageTitle' => 'UniHealth | Foods'
         ];
 
 		$this->load->view('template/navbar', $data);
