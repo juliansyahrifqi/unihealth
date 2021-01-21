@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_model extends CI_Model {
 
+
+    public function userLoginCheck($username) {
+        $this->db->where("user_email =  '$username' or user_username =  '$username'");
+        $query = $this->db->get('uhe_user');
+        return $query->row_array();
+    }
+
     public function register() {
         $data = [
             'user_name' => htmlspecialchars($this->input->post('name', true)),

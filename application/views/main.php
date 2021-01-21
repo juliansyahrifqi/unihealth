@@ -9,7 +9,7 @@
 								Know Your Nutritional Needs With UniHealth
 							</h1>
 						</i>
-						<a href="#" class="btn btn-dark mt-4" style="font-size: 18px; font-family: 'Oswald', sans-serif; font-style: normal;">
+						<a href="<?= base_url('calculator'); ?>" class="btn btn-dark mt-4" style="font-size: 18px; font-family: 'Oswald', sans-serif; font-style: normal;">
 							Get Started <i class="fas fa-play pl-2"></i>
 						</a>
 					</div>

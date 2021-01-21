@@ -1,9 +1,24 @@
 <div class="col-lg-6 mx-auto">
     <div class="container">
-        <div class="logo text-center d-flex justify-content-center align-items-center mt-3">
+        <div class="logo text-center d-flex justify-content-center align-items-center mt-3 mb-4">
             <img src="<?= base_url('assets/images/logo.png'); ?>" alt="UniHealth Logo" style="width: 90px; height: 90px;">
             <h1 class="text-dark ml-3" style="font-family: 'Montserrat', sans-serif;">UniHealth</h1>
         </div>
+
+        <!-- Jika pesan sukses-->
+        <?php if ($this->session->flashdata('success')) : ?>
+            <div class="alert alert-success" role="alert">
+                <?= $this->session->flashdata('success'); ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- jika pesan gagal -->
+        <?php if ($this->session->flashdata('failed')) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $this->session->flashdata('failed'); ?>
+            </div>
+        <?php endif; ?>
+
         <div class="form mt-3">
             <form class="user py-3 px-5" method="post" action="<?= base_url('auth'); ?>" style="background-color: #FFB004; border-radius: 30px;">
                 <h1 class="text-dark text-center" style="font-family: 'Montserrat', sans-serif">LOGIN</h1>
@@ -16,7 +31,7 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password here" style="opacity: 0.6" autocomplete="off">
                 </div>
-                
+
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-dark px-4 py-2 mt-3" style="font-size: 18px;">Login</button>
                 </div>

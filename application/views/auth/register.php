@@ -12,7 +12,11 @@
                     SIGN UP
                 </h1>
 
-                <div class="form-group mt-4">
+                <div class="text-danger ml-2 mb-3">
+                    <small>* Use 6 or more characters for password</small>
+                </div>
+
+                <div class="form-group mt-1">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here" style="opacity: 0.6" value="<?= set_value('name'); ?>" autocomplete="off">
                     <?= form_error('name', '<small class="text-danger pl-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>

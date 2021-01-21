@@ -34,10 +34,10 @@
                 <a class="nav-link text-dark mx-2" href="<?= base_url('main'); ?>">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark mx-2" href="#">Nutrition Calc</a>
+                <a class="nav-link text-dark mx-2" href="<?= base_url('calculator'); ?>">Nutrition Calc</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark mx-2" href="#">Foods</a>
+                <a class="nav-link text-dark mx-2" href="<?= base_url('search'); ?>">Foods</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark mx-2" href="<?= base_url('auth'); ?>">Login</a>
