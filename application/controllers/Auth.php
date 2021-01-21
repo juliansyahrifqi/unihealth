@@ -23,11 +23,13 @@ class Auth extends CI_Controller {
             $this->_doLogin();
         } else {
             if($this->session->userdata('user_username')) {
-                $this->load->view('template/navbar-login', $data);
+                $this->load->view('template/header', $data);
+                $this->load->view('template/navbar-login');
                 $this->load->view('auth/login');
                 $this->load->view('template/footer');
             } else {
-                $this->load->view('template/navbar', $data);
+                $this->load->view('template/header', $data);
+                $this->load->view('template/navbar');
                 $this->load->view('auth/login');
                 $this->load->view('template/footer');
             }
@@ -54,7 +56,7 @@ class Auth extends CI_Controller {
 
                     $this->session->set_userdata($data);
 
-                    redirect('main');
+                    redirect('home');
                 } else {
                     $this->session->set_flashdata('failed', 'Your password is wrong. Try again');
                     redirect('auth');
@@ -99,17 +101,20 @@ class Auth extends CI_Controller {
         } else {
 
             if($this->session->userdata('user_username')) {
-                $this->load->view('template/navbar-login', $data);
+                $this->load->view('template/header', $data);
+                $this->load->view('template/navbar-login');
                 $this->load->view('auth/register');
                 $this->load->view('template/footer');
             } else {
-                $this->load->view('template/navbar', $data);
+                $this->load->view('template/header', $data);
+                $this->load->view('template/navbar');
                 $this->load->view('auth/register');
                 $this->load->view('template/footer');
             }            
         }
     }
 
+    // Logout method
     public function logout() {
         $this->session->unset_userdata('user_username');
         $this->session->unset_userdata('user_email');

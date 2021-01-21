@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Search extends CI_Controller {
+class Foods extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -16,14 +16,15 @@ class Search extends CI_Controller {
         ];
 
 		if($this->session->userdata('user_username')) {
-			$this->load->view('template/navbar-login', $data);
+			$this->load->view('template/header', $data);
+			$this->load->view('template/navbar-login');
 			$this->load->view('search');	
 			$this->load->view('template/footer');
 		} else {
-			$this->load->view('template/navbar', $data);
+			$this->load->view('template/header', $data);
+			$this->load->view('template/navbar');
 			$this->load->view('search');
 			$this->load->view('template/footer');
 		}
-		
 	}
 }
