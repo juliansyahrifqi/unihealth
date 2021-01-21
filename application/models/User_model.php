@@ -23,4 +23,8 @@ class User_model extends CI_Model {
 
         $this->db->insert('uhe_user', $data);
     }
+
+    public function getUserLoginData() {
+        return $this->db->get_where('uhe_user', ['user_email' => $this->session->userdata('user_email')])->row_array();
+    }
 }

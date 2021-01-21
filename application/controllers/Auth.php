@@ -10,16 +10,28 @@ class Auth extends CI_Controller {
     }
 
     public function index() {
+
+        $data = [
+            'pageTitle' => 'UniHealth | Login',
+            'user' => $this->user_model->getUserLoginData()
+        ];
+
         $this->form_validation->set_rules('username', 'Username or Email', 'required|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
 
         if($this->form_validation->run()) {
             $this->_doLogin();
         } else {
-            $data['pageTitle'] = "UniHealth | Login";
-
-            $this->load->view('template/navbar', $data);
-            $this->load->view('auth/login');
+            if($this->session->userdata('user_username')) {
+                $this->load->view('template/navbar-login', $data);
+                $this->load->view('auth/login');
+                $this->load->view('template/footer');
+            } else {
+                $this->load->view('template/navbar', $data);
+                $this->load->view('auth/login');
+                $this->load->view('template/footer');
+            }
+           
         } 
     }
 
@@ -59,6 +71,11 @@ class Auth extends CI_Controller {
 
     // Register process method
     public function register() {
+        $data = [
+            'pageTitle' => 'UniHealth | Register',
+            'user' => $this->user_model->getUserLoginData()
+        ];
+
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[uhe_user.user_email]', [
             'is_unique' => "That email is taken. Try another!"
@@ -80,10 +97,23 @@ class Auth extends CI_Controller {
             $this->session->set_flashdata('success', 'Registration is successful');
             redirect('auth');
         } else {
-             $data['pageTitle'] = "UniHealth | Sign Up";
 
-            $this->load->view('template/navbar', $data);
-            $this->load->view('auth/register');
+            if($this->session->userdata('user_username')) {
+                $this->load->view('template/navbar-login', $data);
+                $this->load->view('auth/register');
+                $this->load->view('template/footer');
+            } else {
+                $this->load->view('template/navbar', $data);
+                $this->load->view('auth/register');
+                $this->load->view('template/footer');
+            }            
         }
+    }
+
+    public function logout() {
+        $this->session->unset_userdata('user_username');
+        $this->session->unset_userdata('user_email');
+        $this->session->set_flashdata('success', 'You have successfully logged out');
+        redirect('auth');
     }
 }
