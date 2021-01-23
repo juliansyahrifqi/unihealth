@@ -1,59 +1,163 @@
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+/* Navbar */
+nav {
+	font-family: 'Oswald', sans-serif;
+	background-color: #FFB004; 
+	letter-spacing: 1px;
 }
 
-button{
-	color: white;
-	margin-left: 30px;
-	padding: 9px 25px;
-	background-color: #404040;
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease 0s;
+.navbar-brand img {
+	width: 60px; 
+	height: 60px;
 }
 
-button:hover{
-	background-color: rgba(127, 127, 127, 1);
+.nav-link {
+	color: #333333;
 }
 
-.banner{
-	font-size: 55px;
-	margin-top: 40px;
-	margin-left: 50px;
-	font-family: 'Open Sans', sans-serif;
-	font-style: italic;
-	font-weight: bold;
+.nav-link:hover {
+	color: #000000;
 }
 
-
-.start{
-	margin-top: 100px;
-	margin-left: 20px;
+.nav-links {
+	border-radius: 30px;
 }
 
-.card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100rem;
-  margin-top: 60px;
-  margin-left: 30px;
-  margin-bottom: 60px;
-  border-radius: 5px;
+.user-image {
+	width:30px; height: 30px;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/* Home Page */
+
+.banner, .jumbotron {
+	background-color: #FFB004;
+}
+
+.banner-title {
+	 font-family: 'Archivo', sans-serif;
+	 font-size: 70px;
+}
+
+.banner-image img {
+	width: 500px; 
+	height: 500px;
+}
+
+.get-started-button {
+	 font-family: 'Oswald', sans-serif; 
+	 font-size: 18px;
+	 font-weight: 400;
+}
+
+.food-section {
+	background-color: #fff7de; 
+	border: 0.1px solid #fff7de;
+}
+
+.card img {
+	width: 100%; 
+	height: 280px;
+}
+
+.food-energy {
+	font-family: 'Roboto', sans-serif; 
+	font-weight: 500; 
+	color: #AFAFAF
+}
+
+.read-more-btn {
+	background-color: #FFB004; 
+	border-radius: 20px; 
+	color: #000;
 }
 
 .about {
-	margin-left: 100px; 
-	margin-top: 20px;
+	background-color: #f7f5f0; 
+	border: 0.1px solid #f7f5f0
 }
 
-.why {
-	margin-left: 370px; 
-	margin-top: 100px;
+.about-title {
+	color: #ffc32e; 
+	font-size: 40px;
+}
+
+.fact-title {
+	font-family: 'Oswald', sans-serif; 
+	font-size: 35px; 
+	font-weight: 500; 
+	letter-spacing: 1px;
+}
+
+.fact-explain {
+	font-family: 'Crimson Text', serif; 
+	font-size: 30px;
+}
+
+.about-image img{
+	height: 300px;
+	width: 197px;
+}
+
+/* Foods */
+
+.logo img {
+	width: 90px; 
+	height: 90px;
+}
+
+.unihealth-text {
+	font-family: 'Montserrat', sans-serif; 
+	font-weight: 700;
+}
+
+.search-btn {
+	background-color: #FFB004; 
+	color: white;
+}
+
+.card-title {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.card-subtitle {
+	font-size: 13px; 
+	color: #AFAFAF;
+}
+
+.nutrition-info {
+	color: #484848;
+}
+
+/* Login */
+
+.user {
+	background-color: #FFB004; 
+	border-radius: 30px;
+}
+
+/* Food Details */
+
+.food-image img {
+	width: 1000px; 
+	height: 460px;
+}
+
+.nutrient-info img {
+	width: 70px; 
+	height: 70px
+}
+
+.nutrient-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 20px;
+}
+
+.nutrient-type {
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.ingredient-list {
+	background-color: #F1F0EC;
 }

@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css'); ?>">
 
+    <!-- My CSS-->
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">

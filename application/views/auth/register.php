@@ -13,8 +13,8 @@
             </div>
         <?php } else { ?>
             <div class="form mt-3">
-                <form class="user py-3 px-5" method="post" action="<?= base_url('auth/register'); ?>" style="background-color: #FFB004; border-radius: 30px;">
-                    <h1 class="text-dark text-center" style="font-family: 'Montserrat', sans-serif">
+                <form class="user py-3 px-5" method="post" action="<?= base_url('auth/register'); ?>">
+                    <h1 class="text-dark text-center unihealth-text">
                         SIGN UP
                     </h1>
 
@@ -58,7 +58,7 @@
                         </button>
                     </div>
 
-                    <p class="mt-3 text-center text-dark font-weight-bold" style="font-family: 'Roboto', sans-serif;">
+                    <p class="mt-3 text-center text-dark font-weight-bold">
                         Already have an account? <a href="<?= base_url('auth'); ?>" class="text-white">Login here</a> 
                     </p>
                 </form>
