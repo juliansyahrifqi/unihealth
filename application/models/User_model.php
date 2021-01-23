@@ -3,7 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_model extends CI_Model {
 
-
     public function userLoginCheck($username) {
         $this->db->where("user_email =  '$username' or user_username =  '$username'");
         $query = $this->db->get('uhe_user');

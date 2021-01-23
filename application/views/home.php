@@ -29,69 +29,36 @@
 	<div class="col-lg-12 mt-0" style="background-color: #fff7de; border: 0.1px solid #fff7de">
 
 		<div class="row px-3 my-5">
-			<div class="col-lg-4">
-				<div class="card shadow-lg mt-4">
-					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-title text-center">Fried Rice</h3>
-					</div>
+			<?php foreach ($foods as $food) : ?>
+				<div class="col-lg-4">
+					<div class="card shadow-lg mt-4">
+						<input type="hidden" name="id" value="<?= rawurlencode($food->recipe->uri); ?>" />
 
-					<div class="card-body d-flex justify-content-between align-items-center px-3 py-0" style="font-family: 'Roboto', sans-serif; font-weight: 500; color: #AFAFAF">
-						<p class="food-type mb-0">Main Course</p>
-						<p class="total-calory mb-0">1000 kkal</p>
-					</div>
+						<img class="card-img-top" src="<?= $food->recipe->image; ?>" alt="<?= $food->recipe->label; ?>" style="width: 100%; height: 280px;" lazyload="true">
+						<div class="card-body">
+							<h3 class="card-title text-center"><?= $food->recipe->label; ?></h3>
+						</div>
 
-					<hr>
+						<div class="card-body d-flex justify-content-between align-items-center px-3 py-0" style="font-family: 'Roboto', sans-serif; font-weight: 500; color: #AFAFAF">
+							<p class="food-type mb-0"><?= $food->recipe->totalNutrients->ENERC_KCAL->label ?></p>
+							<p class="total-calory mb-0"><?= number_format($food->recipe->totalNutrients->ENERC_KCAL->quantity, 0) .  $food->recipe->totalNutrients->ENERC_KCAL->unit; ?></p>
+						</div>
 
-					<div class="card-body d-flex justify-content-between align-items-center px-4 pt-2 pb-4" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
-						<p class="food-origin mb-0">Asian</p>
-						<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">Read more</a>
-					</div>
-				</div>
-			</div>
+						<hr>
 
-			<div class="col-lg-4">
-				<div class="card shadow mt-4">
-					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-title text-center">Fried Rice</h3>
-					</div>
-
-					<div class="card-body d-flex justify-content-between align-items-center px-3 py-0" style="font-family: 'Roboto', sans-serif; font-weight: 500; color: #AFAFAF">
-						<p class="food-type mb-0">Main Course</p>
-						<p class="total-calory mb-0">1000 kkal</p>
-					</div>
-
-					<hr>
-
-					<div class="card-body d-flex justify-content-between align-items-center px-4 pt-2 pb-4" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
-						<p class="food-origin mb-0">Asian</p>
-						<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">Read more</a>
+						<div class="card-body d-flex justify-content-between align-items-center px-4 pt-2 pb-4" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
+							<p class="food-origin mb-0">
+								<?php foreach($food->recipe->dietLabels as $f) : ?>
+									<?= $f ?> <br>
+								<?php endforeach; ?>
+							</p>
+							<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">
+								Read more
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="card mt-4">
-					<img class="card-img-top" src="<?= base_url('assets/images/image1.jpg'); ?>" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-title text-center">Fried Rice</h3>
-					</div>
-
-					<div class="card-body d-flex justify-content-between align-items-center px-3 py-0" style="font-family: 'Roboto', sans-serif; font-weight: 500; color: #AFAFAF">
-						<p class="food-type mb-0">Main Course</p>
-						<p class="total-calory mb-0">1000 kkal</p>
-					</div>
-
-					<hr>
-
-					<div class="card-body d-flex justify-content-between align-items-center px-4 pt-2 pb-4" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
-						<p class="food-origin mb-0">Asian</p>
-						<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">Read more</a>
-					</div>
-				</div>
-			</div>
-
+			<?php endforeach; ?>
 		</div>
 	</div>
 
@@ -130,7 +97,7 @@
 							Why UniHealth ?
 						</p>
 						<p class="fact-explain mt-5" style="font-family: 'Crimson Text', serif; font-size: 30px;">
-							Nutrisi atau gizi adalah substansi organik yang dibutuhkan 
+							Nutrisi atau gizi adalah substansi organik yang dibutuhkan
 							organisme untuk fungsi normal dari sistem tubuh, pertumbuhan,
 							pemeliharaan kesehatan. Penelitian di bidang nutrisi mempelajari
 							hubungan antara makanan dan minuman
