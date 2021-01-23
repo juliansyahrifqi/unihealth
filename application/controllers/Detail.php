@@ -9,7 +9,9 @@ class Detail extends CI_Controller {
             'pageTitle' => 'UniHealth | Food Details'
         ];
 
-		$this->load->view('template/navbar', $data);
+		$this->load->view('template/header', $data);
+		$this->load->view('template/navbar');
 		$this->load->view('detail');
+		$this->load->view('template/footer');
 	}
 }

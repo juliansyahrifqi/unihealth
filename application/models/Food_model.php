@@ -60,4 +60,16 @@ class Food_model extends CI_Model {
 
         return $apiData->hits;
     }
+
+    public function getDetailFood() {
+        $id = rawurlencode($this->input->get('url'));
+
+        $url = 'https://api.edamam.com/search?r='.$id.'&app_id=6571f46a&app_key=78a67102d8c0f942f7767eb848204e74';
+
+        $jsonData = file_get_contents($url);
+
+        $apiData = json_decode($jsonData);
+
+        return $apiData;
+    }
 }

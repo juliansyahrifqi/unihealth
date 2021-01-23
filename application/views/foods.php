@@ -49,7 +49,7 @@
 								<p class="diet-labels mb-0"><?= $f; ?></p>
 							<?php endforeach ?>
 						
-							<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">Read more</a>
+							<a href="<?= base_url('foods/detailFood/' . urlencode(base64_encode($food->recipe->uri))); ?>" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">Read more</a>
 						</div>
 					</div>
 				</div>

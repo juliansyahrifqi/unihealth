@@ -52,7 +52,7 @@
 									<?= $f ?> <br>
 								<?php endforeach; ?>
 							</p>
-							<a href="#" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">
+							<a href="<?= base_url('foods/detailFood/?url=' . rawurlencode($food->recipe->uri)); ?>" class="btn px-3" style="background-color: #FFB004; border-radius: 20px; color: #000;">
 								Read more
 							</a>
 						</div>
