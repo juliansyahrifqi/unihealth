@@ -13,7 +13,7 @@
         <img src="<?= $foods[0]->image; ?>" class="rounded d-block mx-auto" alt="" style="">
       </div>
 
-      <div class="d-flex justify-content-center align-items-center mt-4">
+      <div class="d-flex justify-content-center align-items-center mt-4 nutrient-show">
         <div class="nutrient-info">
           <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" data-holder-rendered="true">
           <p class="nutrient-type">
@@ -57,8 +57,8 @@
         </div>
       </div>
 
-      <div class="ingredients mt-5">
-        <div class="col-lg-10 mx-auto ingredient-list">
+      <div class="ingredients my-5">
+        <div class="col-lg-10 mx-auto ingredient-list py-3">
           <h2 class="text-center pt-2">Ingredients</h2>
           <ul class="mt-5">
             <?php foreach ($foods[0]->ingredientLines as $ingredient) : ?>

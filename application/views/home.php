@@ -65,7 +65,7 @@
 		<div class="container">
 			<div class="fact mt-5">
 				<div class="row align-items-center">
-					<div class="col-9">
+					<div class="col-sm-9">
 						<p class="fact-title">
 							Did you know ?
 						</p>
@@ -77,7 +77,7 @@
 						</p>
 					</div>
 
-					<div class="col-3 text-right about-image">
+					<div class="col-sm-3 text-right about-image">
 						<img src="<?= base_url('assets/images/about1.png'); ?>" alt="Did You Know?">
 					</div>
 				</div>
@@ -85,11 +85,11 @@
 
 			<div class="why" style="margin-top: 100px;">
 				<div class="row align-items-center">
-					<div class="col-3 text-left about-image">
+					<div class="col-sm-3 text-left about-image">
 						<img src="<?= base_url('assets/images/about2.png'); ?>" alt="Why UniHealth">
 					</div>
 
-					<div class="col-9">
+					<div class="col-sm-9">
 						<p class="fact-title">
 							Why UniHealth ?
 						</p>
