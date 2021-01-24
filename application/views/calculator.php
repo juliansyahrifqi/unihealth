@@ -1,64 +1,75 @@
-<body style="background-color: #f5f5f5">
-  <div class="col-lg-6 mx-auto">
+  <div class="col-sm-6 mx-auto">
     <div class="container">
-      <div class="logo text-center d-flex justify-content-center align-items-center mt-3">
-        <h1 class="text-dark ml-3" style="font-family: 'Montserrat', sans-serif; margin-top: 25px; font-weight: bold;">Daily Intake Calculator</h1>
+      <div class="page-title mt-4">
+        <h1 class="text-center">Daily Intake Calculator</h1>
+        <p class="text-center">Calculate your daily nutritional needs</p>
       </div>
-      <h7 class="d-flex justify-content-center" style="color:#bdbab1; padding-bottom: 20px;">Calculate your daily nutritional needs </h7>
 
-      <div class="form mt-3" style="padding-bottom: 50px;">
-        <form class="user py-3 px-5" method="post" action="<?= base_url('auth'); ?>" style="background-color: #e8e8e8; border-radius: 40px; padding-bottom: : 100px;">
-
-          <div class="form-group row" style="padding-top: 30px">
-            <label for="inputPassword" class="col-sm-3 col-form-label">Gender</label>
-            <div class="col-sm-8">
-              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="background: #8f8f8f; color: white;">
-                <option selected>Choose ...</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-              </select>
-            </div>
+      <form class="calculator-form my-5 px-5 py-4" method="post" action="<?= base_url('calculator/calculate'); ?>">
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <label for="gender">Gender</label>
           </div>
-
-          <div class="form-group row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">Height </label>
-            <div class="col-sm-8">
-              <input type="height" class="form-control" id="height" name="height" placeholder="Input your height here" style="opacity: 0.6; background: #8f8f8f; color: white;" autocomplete="off">
-            </div>
+          <div class="col-sm-8">
+            <select class="custom-select input-select" name="gender" id="gender">
+              <option selected value="0">Choose ...</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+            <?= form_error('gender', '<small class="text-danger pl-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>
           </div>
+        </div>
 
-          <div class="form-group row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">Weight </label>
-            <div class="col-sm-8">
-              <input type="weight" class="form-control" id="weight" name="weight" placeholder="Input your weight here" style="opacity: 0.6; background: #8f8f8f; color: white;" autocomplete="off">
-            </div>
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <label for="height"> Height </label>
           </div>
-
-          <div class="form-group row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">Age </label>
-            <div class="col-sm-8">
-              <input type="age" class="form-control" id="age" name="age" placeholder="Input your age here" style="opacity: 0.6; background: #8f8f8f; color: white;" autocomplete="off">
-            </div>
+          <div class="col-sm-8">
+            <input type="height" class="form-control input-text" id="height" name="height" placeholder="Input your height here" value="<?= set_value('height'); ?>" autocomplete="off">
+            <?= form_error('height', '<small class="text-danger pl-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>
           </div>
+        </div>
 
-          <div class="form-group row">
-            <label for="inputPassword" class="col-sm-3 col-form-label">Activities</label>
-            <div class="col-sm-8">
-              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="background: #8f8f8f; color: white;">
-                <option selected>Choose ...</option>
-                <option value="1">Exercise 1 - 2 times a week</option>
-                <option value="1">Exercise 4 - 5 times a week</option>
-                <option value="1">Exercise 6 - 7 times a week</option>
-              </select>
-            </div>
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <label for="weight">Weight</label>
           </div>
-
-          <div class="d-flex justify-content-center" style="padding-bottom: 20px;">
-            <button type="submit" class="btn btn-danger px-4 py-2 mt-3" style="font-size: 18px;">Reset</button>
-
-            <button type="submit" class="btn btn-warning px-4 py-2 mt-3" style="font-size: 18px; margin-left: 50px;">Calculate</button>
+          <div class="col-sm-8">
+            <input type="weight" class="form-control input-text" id="weight" name="weight" placeholder="Input your weight here" value="<?= set_value('weight'); ?>" autocomplete="off">
+            <?= form_error('weight', '<small class="text-danger pl-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>
           </div>
-        </form>
-      </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <label for="age">Age</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="age" name="age" id="age" class="form-control input-text" placeholder="Input your age here" value="<?= set_value('age'); ?>" autocomplete="off">
+            <?= form_error('age', '<small class="text-danger pl-2 mt-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-sm-4">
+            <label for="exercise">Activities</label>
+          </div>
+          <div class="col-sm-8">
+            <select name="exercise" id="exercise" class="custom-select input-select">
+              <option selected value="0">Choose ...</option>
+              <option value="1">Little or no exercise</option>
+              <option value="2">Exercise 1 - 3 times a week</option>
+              <option value="3">Exercise 3 - 5 times a week</option>
+              <option value="4">Exercise 6 - 7 times a week</option>
+            </select>
+            <?= form_error('exercise', '<small class="text-danger pl-2"><i class="fas fa-exclamation-circle">', '</small></i>'); ?>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="reset" class="btn btn-danger reset-btn px-4 py-2 mt-3">Reset</button>
+          <button type="submit" class="btn calculate-btn px-4 py-2 mt-3 ml-5">Calculate</button>
+        </div>
+      </form>
     </div>
   </div>

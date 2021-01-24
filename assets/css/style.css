@@ -161,3 +161,56 @@ nav {
 .ingredient-list {
 	background-color: #F1F0EC;
 }
+
+/* Calculator */
+
+.page-title h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.page-title p {
+	color:#bdbab1;
+}
+
+.calculator-form {
+	background-color: #e8e8e8; 
+	border-radius: 40px;
+}
+
+.form-group {
+	margin-top: 30px;
+}
+
+.input-select, .input-text {
+	opacity: 0.6; 
+	background: #8f8f8f; 
+	color: white;
+}
+
+.input-text:focus {
+	opacity: 0.6; 
+	background: #8f8f8f; 
+	color: white;
+}
+
+.calculate-btn {
+	background-color: #FFB004;
+}
+
+/* Result */
+
+.nutrient-type {
+	background-color: #C4C4C4;
+	padding: 25px;
+	font-size: 20px;
+}
+
+.nutrient-number {
+	margin-top: 20px;
+}
+
+.nutrient-result {
+	margin: 10px 30px;
+}
+
