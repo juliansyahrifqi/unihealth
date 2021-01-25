@@ -4,35 +4,35 @@
 
             <div class="d-flex justify-content-center align-items-center mt-4">
                 <div class="nutrient-result">
-                    <p class="nutrient text-center rounded-circle"> Cal</p>
+                    <img class="rounded-circle" src="<?= base_url('assets/images/icon/cal-icon.png'); ?>">
                     <p class="nutrient-number text-center">
                         <?= number_format($calorie, 0); ?> kcal
                     </p>
                 </div>
 
                 <div class="nutrient-result">
-                    <p class="nutrient text-center rounded-circle"> Fat</p>
+                    <img class="rounded-circle" src="<?= base_url('assets/images/icon/fat-icon.png'); ?>">
                     <p class="nutrient-number text-center">
                         <?= number_format($fat, 0); ?> g
                     </p>
                 </div>
 
                 <div class="nutrient-result">
-                    <p class="nutrient text-center rounded-circle"> Pro</p>
+                    <img class="rounded-circle" src="<?= base_url('assets/images/icon/pro-icon.png'); ?>">
                     <p class="nutrient-number text-center">
                         <?= number_format($protein, 0); ?> g
                     </p>
                 </div>
 
                 <div class="nutrient-result">
-                    <p class="nutrient text-center rounded-circle"> Carb</p>
+                    <img class="rounded-circle" src="<?= base_url('assets/images/icon/carb-icon.png'); ?>">
                     <p class="nutrient-number text-center">
                         <?= number_format($carb, 0); ?> g
                     </p>
                 </div>
 
                 <div class="nutrient-result">
-                    <p class="nutrient text-center rounded-circle"> Fib</p>
+                    <img class="rounded-circle" src="<?= base_url('assets/images/icon/fiber-icon.png'); ?>">
                     <p class="nutrient-number text-center">
                         <?= number_format($fiber, 0); ?> g
                     </p>
@@ -70,11 +70,11 @@
                                 <hr class="mt-1">
 
                                 <div class="card-body d-flex justify-content-between align-items-center px-4 pt-2 pb-4">
-                                    
-                                    <?php foreach($food->recipe->dietLabels as $f) : ?>
+
+                                    <?php foreach ($food->recipe->dietLabels as $f) : ?>
                                         <p class="diet-labels mb-0"><?= $f; ?></p>
                                     <?php endforeach ?>
-                                
+
                                     <a href="<?= base_url('foods/detailFood/?url=' . rawurlencode($food->recipe->uri)); ?>" class="btn px-3 read-more-btn">Read more</a>
                                 </div>
                             </div>
@@ -86,9 +86,9 @@
     <?php } else { ?>
         <div class="container mt-5">
             <div class="alert alert-danger" role="alert">
-            <p class="text-center">
-                You must be logged in to view the result!
-            </p>
+                <p class="text-center">
+                    You must be logged in to view the result!
+                </p>
             </div>
         </div>
     <?php } ?>

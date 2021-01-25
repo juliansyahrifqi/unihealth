@@ -87,6 +87,6 @@ class Food_model extends CI_Model {
 
         $apiData = json_decode($jsonData);
 
-        return $apiData;
+        return $apiData->hits;
     }
 }

@@ -15,44 +15,44 @@
 
       <div class="d-flex justify-content-center align-items-center mt-4 nutrient-show">
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" data-holder-rendered="true">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/cal-icon.png'); ?>" data-holder-rendered="true">
           <p class="nutrient-type">
             <?= number_format($foods[0]->totalNutrients->ENERC_KCAL->quantity, 0); ?> kcal
           </p>
         </div>
 
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/pro-icon.png'); ?>">
           <p class="nutrient-type">
             <?= number_format($foods[0]->totalNutrients->PROCNT->quantity, 0); ?> g
           </p>
         </div>
 
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/carb-icon.png'); ?>">
           <p class="nutrient-type">
-            <?= number_format($foods[0]->totalNutrients->CHOCDF->quantity, 0); ?> g
+            <?= number_format($foods[0]->totalNutrients->CHOCDF->quantity, 2); ?> g
           </p>
         </div>
 
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/fiber-icon.png'); ?>">
           <p class="nutrient-type">
-            <?= number_format($foods[0]->totalNutrients->FIBTG->quantity, 0); ?> g
+            <?= number_format($foods[0]->totalNutrients->FIBTG->quantity, 2); ?> g
           </p>
         </div>
 
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/fat-icon.png'); ?>">
           <p class="nutrient-type">
             <?= number_format($foods[0]->totalNutrients->FAT->quantity, 0); ?> g
           </p>
         </div>
 
         <div class="nutrient-info">
-          <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg">
+          <img class="rounded-circle" src="<?= base_url('assets/images/icon/sugar-icon.png'); ?>">
           <p class="nutrient-type">
-            <?= number_format($foods[0]->totalNutrients->SUGAR->quantity, 0); ?> g
+            <?= number_format($foods[0]->totalNutrients->SUGAR->quantity, 2); ?> g
           </p>
         </div>
       </div>

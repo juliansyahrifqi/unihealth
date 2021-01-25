@@ -204,10 +204,9 @@ nav {
 
 /* Result */
 
-.nutrient {
-	background-color: #C4C4C4;
-	padding: 25px;
-	font-size: 20px;
+.nutrient-result img {
+	width: 70px; 
+	height: 70px
 }
 
 .nutrient-number {

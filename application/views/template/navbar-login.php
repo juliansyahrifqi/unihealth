@@ -21,7 +21,7 @@
                     <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        
                         Hi, <?= $user['user_name']; ?>
-                        <img class="img-profile rounded-circle user-image" src="<?= base_url('assets/images/image1.jpg'); ?>">
+                        <img class="img-profile rounded-circle user-image" src="<?= base_url('./upload/user/') . $user['user_photo']; ?>">
                     </a>
                     <div class="dropdown-menu dropdown-menu-center mr-5">
                         <a href="<?= base_url('auth/logout'); ?>" class="dropdown-item">Logout</a>
